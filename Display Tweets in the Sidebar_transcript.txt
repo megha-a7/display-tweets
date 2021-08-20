@@ -1,0 +1,194 @@
+In the last task he titled are Dashboards, Bain Page and also
+the sidebar.
+And we added some helpful descriptions using marked down
+and also defined a function in our script to load the Twitter
+data set and cash the outputs in this task.
+What we're going to do is display random tweets and allow
+the user to select what type of tweet they want to see.
+That is, if she wants to see tweets, that I have a negative
+sentiment about the airline real pick one randomly from our
+data and display it in the sidebar here.
+And the same goes for if the user picks a neutral or negative
+or positive sentiment tweet.
+All right, So let's go back to our script editor here,
+and what we could do to simply display the data is type in s
+t dot right and pass in data.
+Actually, let's do that quickly is just typing STD on right
+and pass in the data that we just loaded as an argument.
+And once you save the file and go back to the dashboard, this
+is what you're going to see.
+You're going to see an interactive table or data frame
+displayed on your screen.
+You can even sort it by the column values.
+You can just click on any of the columns to sort them
+in ascending or descending order based on the color values.
+But most often, you wouldn't want to show all your data
+like this in the final report or dashboard unless it's
+for debugging purposes.
+So let's go back to our script and remove that line instead.
+What we can do is at a new sub header to our sidebar
+indicating the functionality that we're going to provide.
+So let's type in S T uh, sidebar.
+I hope you're comfortable with a format for adding widgets
+to the sidebar.
+By now, you just need to add sidebar as a keyboard.
+And now let's type in sub Header, just like we headed, Ah
+title and real sided markdown.
+We can add a sub header, uh, anywhere on our webpage
+and let's right some descriptive text.
+Let it be sure.
+Random tweet.
+All right.
+And now, when you press control as to save and you go back,
+you're going to see on the side bar that we have a sub header
+that says show random tweet.
+So currently it doesn't do anything besides just, uh, it's
+purpose, which is just showing a sub header.
+So let's go ahead and build in more functionality in our
+script here.
+Okay, so now that we've had it, we've added the sub header.
+What we can do is ask the user to select Radio Button
+to choose which type treat to display.
+So let's call our users choice of random a random tweet to be
+a little more precise.
+And let's create a new budget that you haven't seen before,
+and we're going to add it to the sidebar.
+So let's type in s t dot cyber, and this time we're going
+to add radio buttons or options that the user can select
+from and before we add the options that the user can select
+from. We can also add an explanatory text to show
+above the radio buttons so that the user knows, or at least
+you are able to indicate to the user what choices
+they are going to select.
+So since we're going to allow the user to select tweets
+by sentiment type either positive, negative or neutral, let's
+just call it sentiment for now and the actual options we pass
+in as a to pull containing our list of option as strings so
+we can show a recent show positive tweets, where we can show
+neutral treats or negative tweets.
+All right, it's as simple as that.
+And now when you press control s to go ahead and a savior
+script and go back to the dashboard, you'll immediately see
+that on the sidebar.
+We've added these three radio options, and you can see
+the helpful text we've added, just showing what these options
+stand for.
+So there's options currently stand for the sentiment, and you
+can go ahead and click on any of these three negative,
+neutral or positive.
+And you're not going to really see a changer
+because we haven't done anything with the user's choice.
+So let's do that now.
+Let's build in our functionality to display random tweets.
+So we go back to the editor and we're going to use the Pandas
+library to query our data frame for a random tweet
+that corresponds to the sentiment selected by the user.
+Let's display the tweet to our sidebar, so let's type in S T
+. I'm just going to add a few more lines to the bottom so
+that you can see my screen in the center of the recording.
+All right, so I'm going to add the budget to the sidebar,
+and and we're going to display the tweet as markdown text,
+all right?
+And the way we select the random tweet is by querying our
+data frame so we can make use of the helpful function
+from pendants called data frame, not query, and then pass
+in our query.
+So we just want to make sure that the airline sentiment
+is equal to random tweet.
+So the column that we want to query is airline underscore
+sentiment.
+This is the column that contains either positive, neutral
+or negative in a row corresponding to a treat.
+And we want to do a string comparison.
+So we type in equal to equal to twice and then make sure
+that we're comparing it against random tweet.
+But when?
+When we're adding it inside a query statement like this to be
+able to access, huh?
+The variable that we're comparing against.
+We need to add an M percent sorry in, uh, at symbol here
+and type in the variable name.
+So it's called random treat.
+We do that and so far we've only query the data frame and not
+returned any value.
+So to go ahead and return the value we care about, which is
+the text of the tweet, let's go ahead and select the text
+column from the data frame.
+So this is simply going to query the data frame for tweets
+that correspond to the sentiment chosen, are selected
+by the user and then returned the text column from the state
+for. And of course, we are not going to display all
+of the tweets.
+We simply want to show one of the treats.
+And let's do this randomly, using the sample function
+from pandas and let's set into one for just one random
+tweets, all right, and when you do this, it's going to return
+a pandas data frame with one value.
+But since we don't want to return at the data frame,
+but and we just want actual text of the tweet weaken, do
+some pandas indexing using the dark, I add function
+and passing the index that we want to select.
+Since we've insured that we're only returning one sample
+in the data for him, we can be confident that our text
+is stored in the zero row and zero column.
+All right, so that's that takes care of showing on a random
+tweet. And what we just did is queried our data frame.
+Specifically, the airline underscore sentiment column
+for entries that match the sentiment selected by the user.
+And then we return the text column containing the actual
+treats themselves and to make sure that we get just a single
+random tweet.
+We used the panda sample function and next so that the return
+simply the text and not a data framer a Siri's.
+We used the dot I add function to select the zero entry
+in the zeroth column, and it allows us to access a single
+value for a roll call impaired by integer position.
+And lastly, to output the text cleanly to the sidebar.
+We used the markdown widget.
+All right, let's go ahead and press control s to save our
+script and go back to our dashboard.
+And if you follow the steps exactly as I did, you're going
+to see this syntax.
+And so this is what I This is what error messages look
+like onstream lit, and you're going to see a debugging
+message here, uh, pointing you to the error.
+So our error was not including this entire query here
+in quotes.
+So let's go ahead and do that in our up.
+So we just remove this quote from here and type in a single
+coke here.
+And once you do that, just make sure you have no other typos
+in your line.
+Like currently, I have misspelled sidebar.
+So I'm going to correct that.
+And then press control s to save the file, and and as soon
+as you make a selection, you're going to see the update here.
+All right, So just make sure you have so how spelled
+positive, neutral or negative correctly?
+Because we're going to be matching entries in the data frame
+to that.
+So if you're not spelled them correctly, you're going to get
+an error like I did very briefly.
+So just make those changes.
+And when you select radio option, you're going to see
+that with each time we select the button, you're going to see
+a newly generated the random tweet that's output it from our
+descent, and clearly you can see here.
+Three user, When we select the negative sentiment
+is expressing frustration at not being allowed to board.
+When we click on positive, you're probably going to see
+positive tweets here on my screen.
+I see the user telling as telling the world on Twitter
+that the flight and attendant was the best on JetBlue's.
+They're very happy, but note that since these are random
+entries and we haven't said a random seed, uh, you
+and I are going to see different tweets when we click on our
+buttons here.
+But I just I'm just saying that to assure you that you've
+coated your app correctly and it's not an error on your part.
+It's just a feature that we built into the All right, so
+pretty neat right now.
+Let's move on to the next task where we'll start with our
+data visualization that we looked at in the demo,
+like creating bar charts and interactive pie charge
+with plucky Express.
