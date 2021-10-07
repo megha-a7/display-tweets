@@ -1,4 +1,4 @@
-# display-tweets
+# display_tweets_streamlit
 ## Create Interactive Dashboards with Streamlit and Python
 ### Instructor ~ Snehan Kekre
 
