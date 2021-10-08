@@ -108,7 +108,6 @@ pydeck==0.6.2
 pydot==1.4.2
 Pygments==2.9.0
 pyparsing==2.4.7
-pypiwin32==223
 pyrsistent==0.18.0
 pyspark==3.1.2
 pytest==6.2.4
